@@ -1,0 +1,191 @@
+/* Importar fuentes desde Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@600&family=Roboto:wght@400&display=swap');
+
+/* Estilo general */
+body {
+    font-family: 'Roboto', Arial, sans-serif; /* Usar Roboto como fuente predeterminada */
+    margin: 0;
+    padding: 0;
+    background-color: white !important; /* Cambia el color de fondo de toda la página a blanco */
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+header {
+    background: #333;
+    color: #fff;
+    padding: 1em 0;
+    text-align: center;
+}
+
+nav .navbar-brand {
+    font-size: 2em;
+    font-weight: bold;
+}
+
+nav .navbar-nav .nav-item {
+    margin: 0 15px;
+}
+
+nav .navbar-nav .nav-link {
+    font-size: 1.25rem;
+}
+
+nav .navbar-nav .nav-link:hover {
+    color: #00BFFF; /* Celeste */
+}
+
+section {
+    padding: 20px;
+    margin: 20px 0;
+    flex: 1;
+}
+
+#hero h1 {
+    font-family: 'Poppins', Arial, sans-serif; /* Usar Poppins para los títulos */
+    font-size: 2.5em;
+    margin-bottom: 10px;
+    text-align: center; /* Mantén el título centrado */
+}
+
+#hero img {
+    max-width: 60%;
+    height: auto;
+}
+
+/* Estilo para el carrusel en la sección hero */
+#hero .carousel-item img {
+    max-height: 500px;
+    object-fit: cover;
+    max-width: 100%;
+    margin: 0 auto;
+}
+
+/* Footer */
+footer {
+    background: rgb(0, 0, 0);
+    color: #fff;
+    text-align: center;
+    padding: 1em 0;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
+
+/* Estilo común para las secciones Inicio, Sobre mí, Mis propuestas, y Contacto */
+section.common-style {
+    background: rgba(255, 255, 255, 1); /* Cambiar color de las secciones */
+    backdrop-filter: blur(10px);
+    padding: 40px;
+    margin: 20px 0;
+    border-radius: 10px;
+    color: #333;
+    
+    /* Alineación y espaciado del texto */
+    text-align: left; /* Alinea el texto a la izquierda pero justificado */
+    line-height: 1.5; /* Controla la separación entre las líneas */
+    margin-bottom: 10px; /* Reduce el margen inferior entre párrafos y listas */
+}
+
+/* Estilo para los títulos de las secciones */
+section.common-style h2 {
+    font-family: 'Poppins', Arial, sans-serif; /* Usar Poppins para los títulos */
+    font-size: 2.5em;
+    font-weight: bold;
+    margin-bottom: 20px;
+    text-align: center; /* Mantén los títulos centrados */
+}
+
+/* Estilo para los párrafos y listas dentro de las secciones */
+section.common-style p, section.common-style ul {
+    font-family: 'Roboto', Arial, sans-serif; /* Usar Roboto para el contenido */
+    font-size: 1.7em; /*tamaño de letra*/
+    line-height: 1.2; /*separacion entre lineas hacia abajo*/
+    margin-bottom: 10px;    
+    text-align: left; /* Alinea el texto del contenido a la izquierda */
+}
+
+/* Estilo para el logo principal */
+#logo-section {
+    padding: 10px 0;
+    margin-bottom: 0;
+}
+
+#logo-section .container {
+    max-width: 100%;
+    margin: 0 auto;
+}
+
+#logo-section img.logo-image {
+    height: 600px;
+    width: auto;
+    margin-bottom: 1px;
+    max-width: 100%; /* Asegura que el logo no exceda el ancho del contenedor */
+}
+
+/* Ajustes para pantallas pequeñas */
+@media (max-width: 768px) {
+    #logo-section img.logo-image {
+        height: auto; /* Mantiene la altura automática */
+        max-width: 90%; /* Asegura que el logo no ocupe todo el ancho en pantallas pequeñas */
+    }
+}
+
+/* Estilo para la sección hero */
+#hero {
+    padding-top: 0px;
+    margin-top: 0px;
+}
+
+#hero .container {
+    margin-top: -20px;
+}
+
+/* Estilo para los elementos de la lista en "Mis propuestas" */
+#mis-propuestas ul li {
+    margin-bottom: 20px; /* Ajusta este valor para controlar la separación entre propuestas */
+}
+
+/* Comentario: 
+   - El `margin-bottom` de 20px crea una separación de 20 píxeles entre cada elemento de la lista. 
+   - Puedes ajustar este valor según sea necesario para aumentar o disminuir la separación entre las propuestas.
+   - Este margen inferior solo afecta a las propuestas dentro de la sección "Mis propuestas" debido al selector #mis-propuestas ul li. 
+*/
+
+/* Estilo para el botón de volver arriba */
+.back-to-top {
+    position: fixed;
+    bottom: 20px; /* Distancia desde la parte inferior de la pantalla */
+    right: 20px; /* Distancia desde la parte derecha de la pantalla */
+    background-color: #333; /* Color de fondo del botón */
+    color: white; /* Color del texto */
+    padding: 10px 15px; /* Espaciado dentro del botón */
+    border-radius: 50%; /* Forma redondeada */
+    text-align: center;
+    text-decoration: none;
+    font-size: 18px; /* Tamaño de la fuente */
+    z-index: 100; /* Asegura que esté por encima de otros elementos */
+    display: none; /* Oculto por defecto */
+    transition: background-color 0.3s; /* Animación para cambio de color */
+}
+
+.back-to-top:hover {
+    background-color: #555; /* Color al pasar el cursor */
+}
+
+/* IMAGEN NUEVA DEL CARROUSEL, LA IMAGEN7EDIT*/
+/* Estilo personalizado para hacer la imagen más ancha */
+.carousel-item img.imagen7-custom {
+    width: 90%; /* Ajusta el ancho de la imagen. Puedes cambiar este valor para hacerla más o menos ancha */
+    margin: 0 auto; /* Centra la imagen horizontalmente en su contenedor */
+    height: 400px; /* Mantiene la altura consistente con las otras imágenes */
+    object-fit: contain; /* Asegura que la imagen se ajuste dentro del contenedor */
+}
+
+/* CSS para aumentar el tamaño del banner */
+.banner-custom {
+    width: 250px; /* Ajusta el valor según tus necesidades */
+}
+
+
